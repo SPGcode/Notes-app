@@ -1,0 +1,16 @@
+{{#if success_msg}}
+
+<div id="messageDiv" class="alert alert-success alert-dismissible fade show" role="alert">
+    {{success_msg}}
+</div>
+
+{{/if}}
+<script>
+    (function quitMessage() {
+    const messageDiv = document.getElementById('messageDiv');
+    console.log(messageDiv);
+    setInterval(() =>{
+        messageDiv.remove();
+    }, 3000);
+})();
+</script>
